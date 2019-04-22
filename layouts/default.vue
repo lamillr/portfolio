@@ -24,6 +24,7 @@ export default {
 body {
   font-family: Lato, sans-serif;
   background-color: #ffffff;
+  margin: 0;
 }
 
 .main-content {

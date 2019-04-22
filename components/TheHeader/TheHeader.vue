@@ -5,9 +5,6 @@
         <nuxt-link to="/" tag="li" class="nav-link">
           <a>About</a>
         </nuxt-link>
-        <nuxt-link to="/" tag="li" class="nav-link">
-          <a>Work</a>
-        </nuxt-link>
         <nuxt-link to="/journal" tag="li" class="nav-link">
           <a>Journal</a>
         </nuxt-link>

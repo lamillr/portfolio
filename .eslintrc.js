@@ -17,16 +17,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     "eol": ["never"], 
-    "vue/html-self-closing": [
-      "error",
-      {
-        "html": {
-          "void": "never",
-          "normal": "always",
-          "component": "always"
-        },
-    "svg": "always",
-    "math": "always"
-    }]
-  } 
+    "vue/html-self-closing": 0,
+    "no-console": 0,
+  }
 }   

@@ -1,39 +1,59 @@
 <template>
-  <section class="container">
-    <nuxt-link v-for="project in projects" :key="project.id" :to="project.id">
-      <article class="project-preview">
-        <div :style="{backgroundImage: project.thumbnailUrl}" class="project-preview-thumbnail"></div>
-        <div class="project-preview-content">
-          <h1>{{ project.title }}</h1>
-          <p>{{ project.previewText }}</p>
-        </div>
-      </article>
-    </nuxt-link>
+  <section id="projects">
+    <ProjectPreview
+      v-for="project in projects"
+      :id="project.id"
+      :key="project.id"
+      :title="project.title"
+      :excerpt="project.previewText"
+      :image="project.thumbnailUrl"
+    />
   </section>
 </template>
 
 <script>
+import ProjectPreview from '@/components/Projects/ProjectPreview'
+
 export default {
-  data() {
-    return {
-      projects: [{
-        title: 'Midday Ordering App',
-        previewText: 'Built with Vue.js and Firebase',
-        thumbnailUrl: 'https://images.app.goo.gl/Psiq14SD3zhCXKzm9',
-        id: 'midday-ordering-app'
-      },
-      {
-        title: 'Innovation Next Steps App',
-        previewText: 'Built with Vue.js and Firebase',
-        thumbnailUrl: 'https://images.app.goo.gl/Psiq14SD3zhCXKzm9',
-        id: 'midday-ordering-app'
-      }
-      ]
-    }
+  components: {
+    ProjectPreview
+  },
+
+  asyncData(context) {
+    return context.app.$storyapi.get('cdn/stories', {
+      version: 'draft',
+      starts_with: 'work/'
+    })
+      .then((res) => {
+        return {
+          projects: res.data.stories.map((sp) => {
+            return {
+              id: sp.slug,
+              title: sp.content.title,
+              previewText: sp.content.summary,
+              thumbnailUrl: sp.content.thumbnail
+            }
+          })
+        }
+      })
   }
 }
 </script>
 
-<style>
+<style scoped>
 
+#projects {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+@media (min-width: 35rem) {
+  #projects{
+    flex-direction: row;
+  }
+}
 </style>
