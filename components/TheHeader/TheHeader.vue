@@ -1,5 +1,8 @@
 <template>
   <header class="main-header">
+    <h2 class="name">
+      Lisa Miller
+    </h2>
     <nav class="main-nav">
       <ul class="nav-links">
         <nuxt-link to="/" tag="li" class="nav-link">
@@ -15,12 +18,18 @@
 
 <style scoped>
   .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #F1FFFA;
+    background: #FFF;
     height:4.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .name {
+    margin-left: 2rem;
+    font-family: Lustria, sans-serif;
+    color: #464E47;
   }
 
   .main-nav {

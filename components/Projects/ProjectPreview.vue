@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="id">
-    <article class="project-preview">
+  <nuxt-link :to="id" class="project-preview">
+    <article>
       <div :style="{backgroundImage: 'url('+ image + ')'}" class="project-preview-thumbnail"></div>
       <div class="project-preview-content">
         <h1>{{ title }}</h1>
@@ -45,7 +45,7 @@ export default {
   .project-preview {
     border-radius: 3px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
-    width: 90%;
+    width: 100%;
     margin: 1rem;
     height:20rem;
   }

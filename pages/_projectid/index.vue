@@ -1,10 +1,10 @@
 <template>
-  <div id="project">
+  <div id="project" v-editable="blok">
     <div class="project-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
     <section class="project-content">
       <h1>{{ title }}</h1>
       <p>{{ content }}</p>
-      <a :href="link">{{ link }}</a>
+      <button><a href="https://github.com/lamillr/if-elif">App Here</a></button>
     </section>
   </div>
 </template>
@@ -17,13 +17,26 @@ export default {
         version: 'draft'
       })
       .then((res) => {
+        console.log(res.data)
         return {
+          blok: res.data.story.content,
           image: res.data.story.content.thumbnail,
           title: res.data.story.content.title,
           content: res.data.story.content.content,
           link: res.data.story.content.link.url
         }
       })
+  },
+  mounted() {
+    this.$storybridge.on(['input', 'published', 'change'], (event) => {
+      if (event.action === 'input') {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      } else {
+        window.location.reload()
+      }
+    })
   }
 }
 </script>
