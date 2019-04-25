@@ -4,7 +4,7 @@
     <section class="project-content">
       <h1>{{ title }}</h1>
       <p>{{ content }}</p>
-      <button><a href="https://github.com/lamillr/if-elif">App Here</a></button>
+      <button><a :href="link">App Here</a></button>
     </section>
   </div>
 </template>
@@ -59,6 +59,22 @@ export default {
   height: 300px;
   background-size: cover;
   background-position: center;
+}
+@media (min-width:35rem) {
+  #project {
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    align-items: center;
+  }
+   .project-thumbnail {
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: 2 / 2;
+  }
+  .project-content {
+    grid-column: 2 / 2;
+  }
+
 }
 
 </style>

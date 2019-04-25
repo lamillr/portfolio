@@ -60,7 +60,7 @@ export default {
 
 #container {
   display: grid;
-  grid-template-rows:50px 250px 250px 200px 200px 350px 150px 250px 250px 250px;
+  grid-template-rows:50px 250px 250px 200px 200px 250px 100px 250px 250px 250px;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 10px;
 }
