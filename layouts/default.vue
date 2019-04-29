@@ -28,6 +28,6 @@ body {
 }
 
 .main-content {
-  margin-top: 4.5rem;
+  margin-top: 3rem;
 }
 </style>

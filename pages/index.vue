@@ -60,9 +60,9 @@ export default {
 
 #container {
   display: grid;
-  grid-template-rows:50px 250px 250px 200px 200px 250px 100px 250px 250px 250px;
+  grid-template-rows:50px 250px 250px 200px auto-fit 250px 100px 250px 250px 250px;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 10px;
+  grid-row-gap: 1rem;
 }
 .intro {
   grid-row: 1/2;
@@ -78,7 +78,7 @@ img{
   width:100%;
 }
 .about {
-  grid-row:5 / 6;
+  grid-row:5 / 5;
   grid-column: 1 / 7;
   color:#464E47;
 }
@@ -93,10 +93,10 @@ h3{
 
 .projects {
   grid-row: 8 / 9;
-  grid-column: 1/8;
+  grid-column: 1 / 8;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(max-content, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(max-content,300px));
 }
 
 @media (min-width: 35rem) {
