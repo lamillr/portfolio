@@ -70,7 +70,7 @@ export default {
 }
 .img-container{
   grid-row: 3/5;
-  grid-column: 1/7;
+  grid-column: 4/7;
 }
 img{
   object-fit: cover;
@@ -78,8 +78,8 @@ img{
   width:100%;
 }
 .about {
-  grid-row:5 / 5;
-  grid-column: 1 / 7;
+  grid-row: 3/ 5;
+  grid-column: 1 / 4;
   color:#464E47;
 }
 h3{

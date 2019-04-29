@@ -1,7 +1,9 @@
 <template>
   <header class="main-header">
     <h2 class="name">
-      Lisa Miller
+      <nuxt-link to="/" tag="h2" class="h2-link">
+        <a>Lisa Miller</a>
+      </nuxt-link>
     </h2>
     <nav class="main-nav">
       <ul class="nav-links">
@@ -24,12 +26,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .name {
-    margin-left: 2rem;
-    font-family: Lustria, sans-serif;
-    color: #464E47;
   }
 
   .main-nav {
@@ -58,10 +54,25 @@
     text-decoration: none;
     color: #464E47;
   }
+ .name {
+    margin-left: 2rem;
+  }
   .nav-link a:hover,
   .nav-link a:active,
   .nav-link.nuxt-link-exact-active a {
    color: #568259;
    border-bottom: 3px solid #568259;
   }
- </style>
+  .h2-link a {
+    color: #464E47;
+    font-family: Lustria, sans-serif;
+    text-decoration: none;
+    font-size:80%;
+
+}
+  .name .h2-link a:hover,
+  .name .h2-link a:active,
+  .name .h2-link .nuxt-link-exact-active a {
+   color: #568259;
+    }
+  </style>
