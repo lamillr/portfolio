@@ -4,17 +4,14 @@
     <main class="main-content">
       <nuxt />
     </main>
-    <Footer />
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader/TheHeader'
-import Footer from '@/components/Footer/Footer'
 export default {
   components: {
-    TheHeader,
-    Footer
+    TheHeader
   }
 }
 </script>
@@ -22,6 +19,8 @@ export default {
 <style>
 * {
  box-sizing:border-box;
+ margin:0;
+ padding:0;
 }
 
 body {

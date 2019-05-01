@@ -20,6 +20,9 @@
         :image="project.thumbnailUrl"
       />
     </section>
+    <section class="info">
+      <Footer />
+    </section>
   </div>
 </template>
 
@@ -27,12 +30,14 @@
 import ProjectPreview from '@/components/Projects/ProjectPreview'
 import Intro from '@/components/Intro/Intro'
 import About from '@/components/About/About'
+import Footer from '@/components/Footer/Footer'
 
 export default {
   components: {
     ProjectPreview,
     Intro,
-    About
+    About,
+    Footer
   },
 
   asyncData(context) {
@@ -60,8 +65,8 @@ export default {
 
 #container {
   display: grid;
-  grid-template-rows:200px 250px 250px 200px auto-fit 250px 20px 250px 250px 250px;
-  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:200px 250px 250px 200px 250px 250px 20px 250px 250px 250px;
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr 250px;
   grid-row-gap: 1rem;
   grid-column-gap: 1rem;
 }
@@ -98,7 +103,7 @@ h3{
   grid-row: 7 / 7;
   grid-column: 1 / 4;
   color:#464E47;
-  font-family: Lato;
+  font-family: Lustria, serif;
   font-size:2em;
   margin-left: 2rem;
 }
@@ -109,5 +114,8 @@ h3{
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max-content,300px));
+}
+.info {
+  grid-row: 10 /10;
 }
 </style>

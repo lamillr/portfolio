@@ -1,6 +1,8 @@
 <template>
   <div id="about">
-    <h2>About</h2>
+    <h2 class="ab">
+      About
+    </h2>
     <p class="about-p">
       I'm a self-taught programmer with good working knowledge in JavaScript ES6, Vue.js, Python, and CSS/Sass.
     </p>
@@ -11,6 +13,9 @@
 </template>
 
 <style>
+.ab {
+  font-family:Lustria, serif;
+}
 .about {
   font-size: 1.5em;
   font-family:Lato;
