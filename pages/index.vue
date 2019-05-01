@@ -60,30 +60,42 @@ export default {
 
 #container {
   display: grid;
-  grid-template-rows:50px 250px 250px 200px auto-fit 250px 100px 250px 250px 250px;
+  grid-template-rows:200px 250px 250px 200px auto-fit 250px 20px 250px 250px 250px;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
 }
 .intro {
   grid-row: 1/2;
-  grid-column: 1/5;
+  grid-column: 1 / 7;
 }
+
+.about {
+  grid-row: 3/ 5;
+  grid-column: 1/ 4;
+  color:#464E47;
+  align-self: center;
+  justify-self: center;
+}
+@media screen  and (max-width:40em){
+  body{
+    font-size: 95%;
+  }
+}
+
 .img-container{
-  grid-row: 3/5;
-  grid-column: 4/7;
+  grid-row: 3/7;
+  grid-column: 4 / 7;
+  align-self: center;
+  justify-self: center;
 }
 img{
-  object-fit: cover;
+  object-fit: contain;
   height:100%;
   width:100%;
 }
-.about {
-  grid-row: 3/ 5;
-  grid-column: 1 / 4;
-  color:#464E47;
-}
 h3{
-  grid-row: 7 / 8;
+  grid-row: 7 / 7;
   grid-column: 1 / 4;
   color:#464E47;
   font-family: Lato;
@@ -97,11 +109,5 @@ h3{
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(max-content,300px));
-}
-
-@media (min-width: 35rem) {
-  .projects{
-    flex-direction: row;
-  }
 }
 </style>

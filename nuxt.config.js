@@ -28,13 +28,13 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
+  css: [ '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
+  plugins: [ '~/plugins/fontawesome.js'
   ],
 
   /*
@@ -43,6 +43,18 @@ export default {
   modules: [
     ['storyblok-nuxt', { accessToken: '7Jy33aVnzcM7VvTaF3ifYgtt', cacheProvider: 'memory' }]
   ],
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
+    ]
+  },
 
   /*
   ** Build configuration

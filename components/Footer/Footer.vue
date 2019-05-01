@@ -61,4 +61,4 @@
   .name .h2-link .nuxt-link-exact-active a {
    color: #568259;
 }
-  </style>
+</style>
