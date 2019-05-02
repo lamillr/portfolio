@@ -4,7 +4,7 @@
       Welcome
     </h2>
     <p class="tagline">
-      I build components in Javascript and Vue.js for apps, sites and headless CMS'.
+      I build components in Javascript and Vue.js for web apps &amp; sites.
     </p>
   </div>
 </template>

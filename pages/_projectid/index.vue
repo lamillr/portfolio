@@ -4,7 +4,7 @@
     <section class="project-content">
       <h1>{{ title }}</h1>
       <p>{{ content }}</p>
-      <button><a :href="link">Link to App</a></button>
+      <button><a :href="link">App Here</a></button>
     </section>
   </div>
 </template>
@@ -67,6 +67,7 @@ export default {
   grid-column: 2 / 3;
   white-space: pre-line;
   font-size: 1.5em;
+  margin-top:1.5em;
 }
 
 @media screen and (max-width:40em) {
@@ -97,6 +98,7 @@ color:#000000;
 background-color:#CCCCCC;
 text-align:center;
 position:relative;
+margin-top: 2em;
 }
 button:hover{
 border-color:#7a7a7a;
