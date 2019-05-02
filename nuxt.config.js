@@ -41,8 +41,10 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['storyblok-nuxt', { accessToken: '7Jy33aVnzcM7VvTaF3ifYgtt', cacheProvider: 'memory' }]
+    ['storyblok-nuxt', { accessToken: process.env.NODE_ENV === 'production' ? 'QVDD6VDTahJchwiS5Pryiwtt' : '7Jy33aVnzcM7VvTaF3ifYgtt', cacheProvider: 'memory' }
+    ]
   ],
+
   fontawesome: {
     imports: [
       {
