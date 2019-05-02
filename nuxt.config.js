@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import pkg from './package'
+// eslint-disable-next-line import/order
+import axios from 'axios'
 
 export default {
   mode: 'universal',
@@ -44,6 +46,31 @@ export default {
     ['storyblok-nuxt', { accessToken: process.env.NODE_ENV === 'production' ? 'QVDD6VDTahJchwiS5Pryiwtt' : '7Jy33aVnzcM7VvTaF3ifYgtt', cacheProvider: 'memory' }
     ]
   ],
+
+  generate: {
+    routes: function (callback) {
+      const token = 'QVDD6VDTahJchwiS5Pryiwtt'
+      const version = 'published'
+      let cacheVersion = 0
+
+      const routes = ['/']
+      // eslint-disable-next-line camelcase
+      axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((space_res) => {
+        cacheVersion = space_res.data.space.version
+
+        // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+        axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}`).then((res) => {
+          Object.keys(res.data.links).forEach((key) => {
+            if (res.data.links[key].slug !== 'home') {
+              routes.push('/' + res.data.links[key].slug)
+            }
+          })
+
+          callback(null, routes)
+        })
+      })
+    }
+  },
 
   fontawesome: {
     imports: [
