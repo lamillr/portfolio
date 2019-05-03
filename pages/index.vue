@@ -4,7 +4,7 @@
       <Intro />
     </section>
     <div class="img-container">
-      <img src="~/assets/code-laptop.jpg">
+      <img src="~/assets/laptop.jpg">
     </div>
     <section class="about">
       <About />
