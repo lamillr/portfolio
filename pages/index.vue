@@ -3,9 +3,6 @@
     <section class="intro">
       <Intro />
     </section>
-    <div class="img-container">
-      <img src="~/assets/laptop.jpg">
-    </div>
     <section class="about">
       <About />
     </section>
