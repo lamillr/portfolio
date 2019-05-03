@@ -1,16 +1,12 @@
+import axios from 'axios'
 // eslint-disable-next-line no-unused-vars
 import pkg from './package'
-// eslint-disable-next-line import/order
-import axios from 'axios'
 
 export default {
   mode: 'universal',
 
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: "Lisa Miller's Portfolio",
+    title: 'LM Portfolio',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,27 +44,19 @@ export default {
   ],
 
   generate: {
-    routes: function (callback) {
-      const token = 'QVDD6VDTahJchwiS5Pryiwtt'
-      const version = 'published'
-      let cacheVersion = 0
-
-      const routes = ['/']
-      // eslint-disable-next-line camelcase
-      axios.get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`).then((space_res) => {
-        cacheVersion = space_res.data.space.version
-
-        // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
-        axios.get(`https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}`).then((res) => {
-          Object.keys(res.data.links).forEach((key) => {
-            if (res.data.links[key].slug !== 'home') {
-              routes.push('/' + res.data.links[key].slug)
-            }
-          })
-
-          callback(null, routes)
+    routes: function () {
+      return axios.get(
+        'https://api.storyblok.com/v1/cdn/stories?version=published&token=QVDD6VDTahJchwiS5Pryiwtt&starts_with=work&cv=' +
+          Math.floor(Date.now() / 1e3)
+      )
+        .then((res) => {
+          const projects = res.data.stories.map(sp => sp.full_slug)
+          return [
+            '/',
+            '/work',
+            ...projects
+          ]
         })
-      })
     }
   },
 
