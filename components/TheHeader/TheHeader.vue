@@ -2,7 +2,7 @@
   <header class="main-header">
     <h2 class="name">
       <nuxt-link to="/" tag="h2" class="h2-link">
-        <a>Lisa Miller</a>
+        Lisa Miller
       </nuxt-link>
     </h2>
     <nav class="main-nav">
@@ -49,16 +49,16 @@
     margin-left: 2rem;
   }
 
-  .h2-link a {
+  .h2-link {
     color: #464E47;
     font-family: Lustria, sans-serif;
     text-decoration: none;
-    font-size:80%;
+    font-size:1.5em;
 
 }
-  .name .h2-link a:hover,
-  .name .h2-link a:active,
-  .name .h2-link .nuxt-link-exact-active a {
+  .h2-link:hover,
+  .h2-link:active,
+  .h2-link .nuxt-link-exact-active{
    color: #568259;
 }
   </style>

@@ -85,6 +85,7 @@ export default {
     grid-column: 1 / 2;
   }
 }
+
 button {
 display:inline-block;
 padding:0.2em 1.45em;

@@ -4,7 +4,7 @@
       About
     </h2>
     <p class="about-p">
-      I'm a self-taught programmer with good working knowledge in JavaScript ES6, Vue.js, Python, and Sass/CSS.
+      I'm a self-taught programmer with good working knowledge of JavaScript ES6, Vue.js, Python, and Sass/CSS.
     </p>
     <p class="about-p">
       I love component-driven development, collaboration, learning new technologies, and mastering what I've learned.
@@ -22,6 +22,6 @@
   margin-left: 2rem;
 }
 .about-p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 </style>

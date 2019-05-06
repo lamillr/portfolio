@@ -19,7 +19,7 @@ export default {
 
 .welcome, .tagline{
   color:#464E47;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 .welcome {
  font-size: 3em;
@@ -28,6 +28,8 @@ export default {
 
 .tagline {
   font-size: 1.5em;
-  font-family:Lato;
+  font-family:Lato, sans-serif;
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
 </style>
