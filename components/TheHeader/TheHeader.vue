@@ -47,7 +47,7 @@
     color: #464E47;
     font-family: Lustria, sans-serif;
     text-decoration: none;
-    font-size:1.5em;
+    font-size:2.5em;
     margin-left: 2rem;
 
 }
