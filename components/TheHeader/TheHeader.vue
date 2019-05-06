@@ -1,10 +1,8 @@
 <template>
   <header class="main-header">
-    <h2 class="name">
-      <nuxt-link to="/" tag="h2" class="h2-link">
-        Lisa Miller
-      </nuxt-link>
-    </h2>
+    <nuxt-link to="/" tag="h2" class="h2-link">
+      Lisa Miller
+    </nuxt-link>
     <nav class="main-nav">
       <ul class="nav-links">
         <a href="https://github.com/lamillr?tab=repositories" class="fa-icon"><font-awesome-icon :icon="['fab', 'github']" size="2x" /></a>
@@ -45,15 +43,12 @@
     color:#568259;
   }
 
- .name {
-    margin-left: 2rem;
-  }
-
   .h2-link {
     color: #464E47;
     font-family: Lustria, sans-serif;
     text-decoration: none;
     font-size:1.5em;
+    margin-left: 2rem;
 
 }
   .h2-link:hover,
