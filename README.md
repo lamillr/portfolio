@@ -1,3 +1,7 @@
+Built with Nuxt.js/Static Site Generator, Storyblok, a headless CMS & Git.
+https://lisamiller.netlify.com/
+
+
 # STATIC
 
 **This directory is not required, you can delete it if you don't want to use it.**
