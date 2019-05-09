@@ -71,7 +71,7 @@ export default {
 }
 .intro {
   grid-row: 1/2;
-  grid-column: 1 / 7;
+  grid-column: 1 / -1;
   align-self: center;
 }
 
@@ -86,6 +86,10 @@ export default {
   body{
     font-size: 80%;
   }
+  .about {
+    grid-column: 1 / -1;
+    margin-right:1em;
+  }
 }
 
 .img-container{
@@ -98,6 +102,22 @@ img{
   height:100%;
   width:100%;
 
+}
+
+@media screen  and (max-width:30em){
+  .img-container{
+    grid-row: 2;
+    grid-column: 1/-1;
+    margin-left: 2.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+  img{
+  object-fit: contain;
+  height:100%;
+  width:100%;
+
+}
 }
 h3{
   grid-row: 7 / 7;
@@ -115,6 +135,15 @@ h3{
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content,300px));
+}
+@media screen  and (max-width:40em){
+  .projects{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 1rem;
+    margin-right: 1em;
+  }
 }
 .info {
   grid-row: 10 /12;

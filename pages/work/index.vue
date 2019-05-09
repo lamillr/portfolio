@@ -114,8 +114,9 @@ h3{
   grid-column: 1 / 8;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content,300px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
 }
+
 .info {
   grid-row: 10 /12;
   grid-column: 1 / -1;
