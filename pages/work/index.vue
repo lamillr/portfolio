@@ -130,6 +130,11 @@ h3{
   grid-row: 10 /12;
   grid-column: 1 / -1;
 }
+@media screen  and (max-width:40em){
+  .info {
+    margin-right: 1em;
+  }
+}
 Footer {
   grid-row: 10/10;
    background: #f6f5f3;

@@ -104,7 +104,7 @@ img{
 
 }
 
-@media screen  and (max-width:30em){
+@media screen  and (max-width:40em){
   .img-container{
     grid-row: 2;
     grid-column: 1/-1;
@@ -149,6 +149,11 @@ h3{
 .info {
   grid-row: 10 /12;
   grid-column: 1 / -1;
+}
+@media screen  and (max-width:40em){
+  .info {
+    margin-right:1em;
+  }
 }
 Footer {
   grid-row: 10/10;
