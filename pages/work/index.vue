@@ -116,6 +116,14 @@ h3{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 300px));
 }
+@media screen  and (max-width:40em){
+  .projects{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 1rem;
+    margin-right: 1em;
+  }
 
 .info {
   grid-row: 10 /12;
