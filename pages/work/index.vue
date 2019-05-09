@@ -124,6 +124,7 @@ h3{
     padding: 1rem;
     margin-right: 1em;
   }
+}
 
 .info {
   grid-row: 10 /12;

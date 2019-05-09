@@ -136,6 +136,7 @@ h3{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content,300px));
 }
+
 @media screen  and (max-width:40em){
   .projects{
     grid-column: 1 / -1;
