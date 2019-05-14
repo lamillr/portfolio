@@ -4,7 +4,7 @@
       About
     </h2>
     <p class="about-p">
-      I'm a self-taught programmer with good working knowledge of JavaScript ES6, Vue.js, Python, and Sass/CSS.
+      I'm a self-taught programmer with a good working knowledge of JavaScript ES6, Vue, Python, Sass/CSS3 and HTML5.
     </p>
     <p class="about-p">
       I love component-driven development, collaboration, learning new technologies, and mastering what I've learned.
